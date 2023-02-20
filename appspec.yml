@@ -1,0 +1,10 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /tmp
+hooks:
+  ApplicationStart:
+    - location: scripts/start-container.sh
+      timeout: 10
+      runas: ec2-user
